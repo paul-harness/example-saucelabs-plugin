@@ -23,4 +23,5 @@ jobs:
       uses: docker/build-push-action@v3
       with:
           push: true
-          tags: actions-demo:latest
+          name: actions-demo
+          tags: latest
