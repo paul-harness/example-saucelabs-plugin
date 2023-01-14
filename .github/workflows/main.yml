@@ -17,8 +17,9 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
+        image_name: actions-demo
         push: true
-        tags: actions:${{ github.sha }}
+        tags: ${{ github.sha }}
       env:
         DOCKER_USERNAME: ${{ env.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ env.DOCKER_PASSWORD }}
