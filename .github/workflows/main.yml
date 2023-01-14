@@ -17,7 +17,7 @@ jobs:
       run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
     - name: Build the Docker image
-      run: docker build -t actions:${{ env.GITHUB_SHA }} .
+      run: docker build -t actions-demo:${{ env.GITHUB_SHA }} .
 
     - name: Push the Docker image
-      run: docker push actions:${{ env.GITHUB_SHA }}
+      run: docker push actions-demo:${{ env.GITHUB_SHA }}
